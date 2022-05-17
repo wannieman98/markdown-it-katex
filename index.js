@@ -329,6 +329,7 @@ module.exports = function math_plugin(md, options) {
 
     // set KaTeX as the renderer for markdown-it-simplemath
     const katexInline = (latex) => {
+        console.log(latex);
         const displayMode = /\n/.test(latex);
         try {
             return katex.renderToString(latex, { ...options, displayMode });
