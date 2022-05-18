@@ -204,8 +204,8 @@ function bare_math_block(state, start, end, silent) {
 
     const firstLine = state.src.slice(pos, max);
 
-    const beginRe = /^\begin/;
-    const endRe = /^\end/;
+    const beginRe = /^\\begin/;
+    const endRe = /^\\end/;
 
     if (!beginRe.test(firstLine)) { return false; }
 
